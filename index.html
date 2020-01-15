@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+				color: white;
+			}
+			ul,li{
+				list-style: none;
+			}
+			.box{
+				border: solid 1px black;
+				width: 50%;
+				/*height: 510px;*/
+				background: linear-gradient(to top,#eeb56d,#de947c,#72547c,#3e4a83);
+				margin: 20px auto;
+				padding: 10px;
+			}
+			.header{
+				display: flex;
+				justify-content: space-around;
+				text-align: center;
+			}
+			.header ul{
+				border-right: solid 1px #ccc;
+				width: 20%;
+				cursor: pointer;
+			}
+			.header ul:hover{
+				box-shadow: 3px 3px 3px salmon;
+			}
+			.header ul li{
+				line-height: 40px;
+			}
+			.header ul li:first-of-type{
+				font-size: 15px
+			}
+			
+			.header ul li:nth-of-type(3){
+				position: relative;
+			}
+			.header h1{
+				font-size: 42px;
+			}
+			.header ul li:nth-of-type(3) span:nth-of-type(1){
+				font-size: 14px;
+				position: absolute;
+				top: -10px;
+				left: 120px;
+				font-weight: 500;
+			}
+			.header ul li:nth-of-type(3) span:nth-of-type(2){
+				font-size: 14px;
+				margin-left: 5px;
+				font-weight: 500;
+			}
+			.content{
+				display: flex;
+				background: rgba(237,182,192,0.2);
+			}
+			.content ul{
+				margin-right: 50px;
+			}
+			.content ul li{
+				border-bottom: solid 1px wheat;
+				padding: 3px;
+				margin: 10px 0 ;
+			}
+			h3 span{
+				background: rgba(237,182,192,0.2);
+				margin-right: 10px;
+				padding: 3px;
+				border:  solid 1px wheat;
+				cursor: pointer;
+			}
+			h3 span:hover{
+				border: solid 1px black;
+			}
+			#city{
+				margin-top: 20px;
+				width: 180px;
+				height: 40px;
+				border: none;
+				border-radius: 4px;
+				color: black;
+			}
+			#btn{
+				width: 60px;
+				height: 41px;
+				line-height: 40px;
+				text-align: center;
+				border: none;
+				border-top-right-radius: 4px;
+				border-bottom-right-radius: 4px;
+				margin-left: -10px;
+				background: coral;
+				
+			}
+			.today{
+				width:30%  !important;
+			}
+			.now{
+				display: none;
+			}
+			.today .now{
+				display: block;
+			}
+			.content ul{
+				width: 100%;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			.content li{
+				width: 45%;
+				position: relative;
+				line-height: 50px;
+			}
+			.des{
+				position: absolute;
+				width:100%;
+				height: 120px;
+				background: salmon;
+				top: 50px;
+				display: none;
+			}
+			.content li:hover .des{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="header">
+				<!-- <ul class="today">
+					<li>01月08日&nbsp;周三&nbsp;农历十二月十四</li>
+					<li><img src="img/123_03.jpg"/></li>
+					<li><h1>5<span class="sheshi">℃</span><span>晴(实时)</span></h1></li>
+					<li>-7~5℃</li>
+					<li>晴</li>
+					<li>北风微风</li>
+					<li><span>23</span>&nbsp;<span>优</span></li>
+				</ul>
+				<ul>
+					<li>01月08日&nbsp;周三&nbsp;农历十二月十四</li>
+					<li><img src="img/123_03.jpg"/></li>
+					<li><h1>5<span>℃</span><span>晴(实时)</span></h1></li>
+					<li>-7~5℃</li>
+					<li>晴</li>
+					<li>北风微风</li>
+					<li><span>23</span>&nbsp;<span>优</span></li>
+				</ul>
+				<ul>
+					<li>01月08日&nbsp;周三&nbsp;农历十二月十四</li>
+					<li><img src="img/123_03.jpg"/></li>
+					<li><h1>5<span>℃</span><span>晴(实时)</span></h1></li>
+					<li>-7~5℃</li>
+					<li>晴</li>
+					<li>北风微风</li>
+					<li><span>23</span>&nbsp;<span>优</span></li>
+				</ul>
+				<ul>
+					<li>01月08日&nbsp;周三&nbsp;农历十二月十四</li>
+					<li><img src="img/123_03.jpg"/></li>
+					<li><h1>5<span>℃</span><span>晴(实时)</span></h1></li>
+					<li>-7~5℃</li>
+					<li>晴</li>
+					<li>北风微风</li>
+					<li><span>23</span>&nbsp;<span>优</span></li>
+				</ul>
+				<ul>
+					<li>01月08日&nbsp;周三&nbsp;农历十二月十四</li>
+					<li><img src="img/123_03.jpg"/></li>
+					<li><h1>5<span>℃</span><span>晴(实时)</span></h1></li>
+					<li>-7~5℃</li>
+					<li>晴</li>
+					<li>北风微风</li>
+					<li><span>23</span>&nbsp;<span>优</span></li>
+				</ul> -->
+			</div>
+			<div class="content">
+				<ul>
+					<!-- <li>
+						穿衣：<span>冷</span>
+						<div class="des">
+							<p>穿衣指数：冷</p>
+							<div>
+								收到反馈说sdfsdfjksdfhsdfsdfsdfsd
+							</div>
+						</div>
+					</li> -->
+					
+				</ul>
+				
+			</div>
+			<h3>
+				<span>24小时温度</span>
+				<span>风力风向</span>
+				<span>降水量</span>
+				<span>相关指数</span>
+			</h3>
+			<div class="footer">
+				<input type="text" name="" id="city" value="北京"  placeholder="请输入要查询的城市"/>
+				<button id="btn">搜索</button>
+			</div>
+		</div>
+		<script src="jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/nongli.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tianqi.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>
